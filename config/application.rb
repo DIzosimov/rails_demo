@@ -20,7 +20,6 @@ Bundler.require(*Rails.groups)
 module RailsDemo
   class Application < Rails::Application
   config.load_defaults 5.2
-  config.generators.system_tests = nil
     config.generators do |generate|
       generate.helper false
       generate.assets false
@@ -29,5 +28,6 @@ module RailsDemo
       generate.routing_specs false
       generate.controller_specs false
     end
+    config.generators.system_tests = nil
   end
 end
