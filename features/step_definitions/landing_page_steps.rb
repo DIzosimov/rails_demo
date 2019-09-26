@@ -11,3 +11,4 @@ Given(/^the following articles exists$/) do |table|
         Article.create!(hash)
     end
 end
+
