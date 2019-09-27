@@ -9,6 +9,7 @@ Feature: List articles on landing page
         |A breaking news item|Some breaking action            |
         |Learn Rails 5       |Build awesome rails applications|
         And I am on the landing page
+        And I click "My Articles"
 
     Scenario: Viewing a list of articles on the application's landing page
         Then I should see "A breaking news item"

@@ -1,5 +1,9 @@
-And(/^I am on the landing page$/) do
+Given("I am on the landing page") do
     visit root_path
+end
+
+And("I am on the articles page") do
+    visit articles_path
 end
 
 Then(/^I should see "([^"]*)"$/) do |text|

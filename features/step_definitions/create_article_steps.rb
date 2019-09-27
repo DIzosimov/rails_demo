@@ -1,11 +1,12 @@
-Given("I visit the {string} page") do |string|
-  visit root_path
+When("I click {string}") do |element|
+  click_on element
 end
 
-When("I click {string} link") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+When("I fill in {string} with {string}") do |field, text|
+  fill_in field, with: text
 end
 
-When("I fill in {string} with {string}") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I should be on {string} page") do |string|
+   article = Article.find_by(title: string)
+   expect(current_path).to eq article_path(article)
 end
