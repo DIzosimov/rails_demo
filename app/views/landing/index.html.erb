@@ -1,4 +1,4 @@
-<form class="new-article-form" action='#'>
+<%# <form class="new-article-form" action='#'>
     <div class="field">
         <label>Title</label>
         <input type="string" name="title" id="article-title">
@@ -7,7 +7,7 @@
         <label>Content</label>
         <input type="text" name="content" id="article-content">
     </div>
-<button class="create article">Create Article</button>
+<button class="create article">Create Article</button> %>
 <ul>
     <% @articles.each do |article| %>
         <li>
