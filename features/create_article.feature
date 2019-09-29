@@ -4,8 +4,13 @@ Feature: Create articles
     I would like to be able to create articles
 
     Background:
-        Given I am on the articles page
-        And I click "New Article" 
+        Given the following user exist:
+        | name   | email             | password |
+        | Joe    | joe@doe.com       | password |
+        And I am logged in as "Joe"
+        And I am on the landing page
+        And I click "All Articles"
+        And I click "New Article"
 
     Scenario: Successfully create an article [Happy Path]
         When I fill in "Title" with "Learning Rails 5"

@@ -7,8 +7,7 @@
       <ul class="nav navbar-nav pull-right">
         <% if user_signed_in? %>
           <li><%= link_to "Hello, #{current_user.name}", "#" %></li>
-          <li><%= link_to 'My Articles', controller: 'articles' %></li>
-          <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' } %></li>
         <% else %>
           <li class="active"><%= link_to 'Login', new_user_session_path %></li>
           <li><%= link_to 'Sign up', new_user_registration_path %></li>

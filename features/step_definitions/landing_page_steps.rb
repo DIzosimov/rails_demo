@@ -6,7 +6,11 @@ And("I am on the articles page") do
     visit articles_path
 end
 
-Then(/^I should see "([^"]*)"$/) do |text|
+# Then(/^I should see "([^"]*)"$/) do |text|
+#     expect(page).to have_content text
+# end
+
+Then("I should see {string}") do |text|
     expect(page).to have_content text
 end
 
